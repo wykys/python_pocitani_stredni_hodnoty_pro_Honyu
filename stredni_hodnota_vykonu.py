@@ -83,12 +83,10 @@ def nacti_soubor(file_name):
 	vstup = fr.readlines()
 	
 	hlavicka = vstup.pop(0)
-	hlavicka = hlavicka.strip().split(';')
-	hlavicka.remove('')
+	hlavicka = hlavicka.strip().split(',')
 	
 	for s in vstup:
-		s = s.strip().split(';')
-		s.remove('')
+		s = s.strip().split(',')
 		
 		t = float(s[0].strip())
 		u = float(s[1].strip())
